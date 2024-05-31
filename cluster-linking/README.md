@@ -5,8 +5,6 @@ This is an example of setting up Cluster Linking between two clusters.
 - **Cluster A**: Source Cluster
 - **Cluster B**: Destination Cluster
 
-The goal is to create a mirror topic and override the `retention.ms`.
-
 The `compose.yaml` file will spin up two clusters with one broker and one controller in each, as well as one Confluent Control Center instance.
 
 The config folder contains the configuration file for the cluster link.
@@ -55,7 +53,7 @@ kafka-console-producer --topic dummy --bootstrap-server broker-A-1:9092
 
 ### 5. Create the link and start the mirroring process in the destination cluster
 
-In a new terminal session
+In a new terminal session we start the link from the destination side.
 
 ```shell
 docker exec -it broker-B-1 /bin/bash
